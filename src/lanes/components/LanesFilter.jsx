@@ -10,8 +10,10 @@ export default class LanesFilter extends Component {
     this.props.setLanesFilter(filter);
   }
 
-    render() {
+  render() {
     const {lanes, filter} = this.props;
+      
+    // This returns a box with count of lanes in this filter
     const displayCount = (filter, color) => {
       const style = {backgroundColor: color, border: `1px solid ${color}`}
       const count = lanes.filter(lane => lane[filter]).reduce(prev => prev + 1 , 0);
@@ -28,25 +30,25 @@ export default class LanesFilter extends Component {
 
     return(
       <div className="lanes-filter">
-          <div style={selecedStyle('all')} onClick={() => this.setLanesFilter('all')}>
-            ALL
-          </div>
-          <div style={selecedStyle('isOutbid')} onClick={() => this.setLanesFilter('isOutbid')}>
-            OUTBID {displayCount('isOutbid', '#E76F67')}
-          </div>
-          <div style={selecedStyle('isWatching')} onClick={() => this.setLanesFilter('isWatching')}>
-            WATCHING {displayCount('isWatching', 'blue')}
-          </div>
-          <div style={selecedStyle('isWinning')} onClick={() => this.setLanesFilter('isWinning')}>
-            WINNING {displayCount('isWinning', '#1ABB9A')}
-          </div>
+        <div style={selecedStyle('all')} onClick={() => this.setLanesFilter('all')}>
+          ALL
+        </div>
+        <div style={selecedStyle('isOutbid')} onClick={() => this.setLanesFilter('isOutbid')}>
+          OUTBID {displayCount('isOutbid', '#E76F67')}
+         </div>
+         <div style={selecedStyle('isWatching')} onClick={() => this.setLanesFilter('isWatching')}>
+           WATCHING {displayCount('isWatching', 'blue')}
+         </div>
+         <div style={selecedStyle('isWinning')} onClick={() => this.setLanesFilter('isWinning')}>
+           WINNING {displayCount('isWinning', '#1ABB9A')}
+         </div>
       </div>
-		);
-	}
+    );
+  }
 }
 
 LanesFilter.propTypes = {
   filter: PropTypes.string.isRequired,
   lanes: PropTypes.array.isRequired,
-  setLanesFilter: PropTypes.func.isRequired,
+  setLanesFilter: PropTypes.func.isRequired
 }
