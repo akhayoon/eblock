@@ -1,15 +1,28 @@
 .lanes-sidebar-main {
 
   .search-box {
-    margin: 15px 0;
-    width: 90%;
-    border-radius: 4px;
-    padding: 0 10px;
-    height: 40px;
-    border: 1px solid #C7D7D9;
+    position: relative;
 
-    &:focus {
-      border-color: #557378 !important;
+    .search-icon {
+      position: absolute;
+      z-index: 5;
+      color: #BABABA;
+      top: 32px;
+      left: 300px;
+      font-size: 12px;
+    }
+
+    .search-box-input {
+      margin: 15px 0;
+      width: 90%;
+      border-radius: 4px;
+      padding: 0 10px;
+      height: 40px;
+      border: 1px solid #C7D7D9;
+
+      &:focus {
+        border-color: #557378 !important;
+      }
     }
   }
 

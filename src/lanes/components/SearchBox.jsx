@@ -13,14 +13,17 @@ export default class SearchBox extends Component {
 
   render() {
     return (
-      <input
-        value={this.state.searchText}
-        onChange={this.onChange}
-        type="text"
-        className="search-box form-control fuzzy-search order-guide-search"
-        placeholder="Search Live Lanes"
-        autoFocus
-      />
+      <div className="search-box">
+        <span className="fa fa-search search-icon"></span>
+        <input
+          value={this.state.searchText}
+          onChange={this.onChange}
+          type="text"
+          className="search-box-input"
+          placeholder="Search Live Lanes"
+          autoFocus
+        />
+      </div>
     );
   }
 }

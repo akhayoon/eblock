@@ -4,7 +4,7 @@
   .app-header {
     .nav {
       background-color: #24292E;
-      min-height: 50px;
+      min-height: 44px;
       width: 100%;
       color: #87898B;
 
@@ -15,12 +15,16 @@
         > * {
           display: table-cell;
           width: 125px;
+          vertical-align: middle;
         }
 
         img {
+          display: block;
           width: 100px;
           height: 30px;
           width: 100px;
+          margin-left: 10px;
+          margin-top: 12px;
         }
 
         i {
@@ -49,7 +53,7 @@
       
       .second-nav-menu {
         display: table;
-        min-height: 50px;
+        min-height: 44px;
         width: 40%;
         font-weight: 500;        
 
