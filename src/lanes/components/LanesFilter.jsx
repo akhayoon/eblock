@@ -2,10 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 export default class LanesFilter extends Component {
-  state = {
-    filter: ''
-  }
-
   setLanesFilter = (filter) => {
     this.props.setLanesFilter(filter);
   }
