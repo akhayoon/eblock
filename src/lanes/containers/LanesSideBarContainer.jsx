@@ -7,7 +7,7 @@ import LanesSideBarMain from '../components/LanesSideBarMain.jsx'
 import '../styles/lanes.scss'
 
 class LanesSideBarContainer extends Component {
-	componentDidMount() {
+  componentDidMount() {
     this.props.lanesActions.fetchLanes();
   }
   
@@ -19,39 +19,30 @@ class LanesSideBarContainer extends Component {
     this.props.lanesActions.changeSearchText(searchText);
   }
 
-	render() {
-		return(
+  render() {
+    return(
       <LanesSideBarMain
         {...this.props}
         setLanesFilter={this.setLanesFilter}
         changeSearchText={this.changeSearchText}
       />
-		);
-	}
+    );
+  }
 }
 
-LanesSideBarContainer.propTypes = {
-
-}
-
-const mapStateToProps = (state, props) =>
-{
+const mapStateToProps = (state, props) => {
   const {lanes, searchText, filter} = state.lanesReducer;
-	return {
-    lanes: lanes.filter(lane => `${lane.year} ${lane.make} ${lane.model} ${lane.lane} ${lane.auction}`.toLowerCase().includes(searchText)),
-    searchText,
-    filter
-	}
+    return {
+      lanes: lanes.filter(lane => `${lane.year} ${lane.make} ${lane.model} ${lane.lane} ${lane.auction}`.toLowerCase().includes(searchText)),
+      searchText,
+      filter
+  }
 }
 
-const mapDispatchToProps = dispatch =>
-{
-	return {
-		lanesActions: bindActionCreators(LanesActions, dispatch)
-	}
+const mapDispatchToProps = dispatch => {
+  return {
+    lanesActions: bindActionCreators(LanesActions, dispatch)
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(LanesSideBarContainer);
-
-
-
