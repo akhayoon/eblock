@@ -1,0 +1,80 @@
+.lanes-sidebar-main {
+
+  .search-box {
+    margin: 15px 0;
+    width: 90%;
+    border-radius: 4px;
+    padding: 0 10px;
+    height: 40px;
+    border: 1px solid #C7D7D9;
+
+    &:focus {
+      border-color: #557378 !important;
+    }
+  }
+
+  .lanes-filter {
+    display: table;
+    width: 90%;
+    cursor: pointer;
+    color: #C2C3C4;
+    padding: 0 10px;
+    height: 30px;
+  
+    > * {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .colour-box {
+      border-radius: 25%;
+      padding: 1px 4px;
+      background: #fff;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 10px;
+    }
+  }
+  
+  .lanes-list {
+    .lane-box {
+      text-align: left;
+      cursor: pointer;
+      padding: 10px 15px;
+      border-top: 1px solid #F5F5F6;
+      border-bottom: 1px solid #F5F5F6;
+
+      &:hover {
+        background-color: #F6FFFD;
+      }
+
+      &:first-child {
+        border-top: 1px solid #F5F5F6;
+      }
+
+      .lane-name {
+        color: #6BD1BB;
+        font-weight: bold;
+      }
+
+      .auction {
+        color: #C5C6C7;
+        font-weight: 200;
+      }
+
+      .year-make-model {
+        font-weight: 600;
+      }
+
+      .items-remaining {
+        color: #C5C6C7;
+        font-weight: 100;
+      }
+
+      > * {
+        margin: 5px 0;
+      }
+    }
+  }
+
+}
