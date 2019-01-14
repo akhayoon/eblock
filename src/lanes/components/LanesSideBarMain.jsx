@@ -25,6 +25,7 @@ export default class LanesSideBarMain extends Component {
           setLanesFilter={setLanesFilter}
         />
 
+        {/* Only filter lane results that are not 'all' */}
         <div className="lanes-list">
           {filter !== 'all'
             ? 
