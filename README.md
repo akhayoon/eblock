@@ -2,6 +2,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Demo
 
+You can view a demo of the application here:
+http://eblock-lanes.s3-website-us-west-2.amazonaws.com/
+
 ## Available Scripts
 
 In the project directory, you can run:
