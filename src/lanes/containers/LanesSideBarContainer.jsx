@@ -32,6 +32,7 @@ class LanesSideBarContainer extends Component {
 
 const mapStateToProps = (state, props) => {
   const {lanes, searchText, filter} = state.lanesReducer;
+  // Implemented an extremely simple search for lanes here.
     return {
       lanes: lanes.filter(lane => `${lane.year} ${lane.make} ${lane.model} ${lane.lane} ${lane.auction}`.toLowerCase().includes(searchText)),
       searchText,
