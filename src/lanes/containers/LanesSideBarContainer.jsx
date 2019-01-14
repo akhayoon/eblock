@@ -2,7 +2,7 @@ import React, { Component } 	from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import * as LanesActions from '../landesActions'
+import * as LanesActions from '../lanesActions'
 import LanesSideBarMain from '../components/LanesSideBarMain.jsx'
 import '../styles/lanes.scss'
 
